@@ -1,0 +1,66 @@
+#blob{
+    background-color: #fff;
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    border-radius:1000px;
+    background: linear-gradient(to right, rgb(255, 166, 0),rgb(255, 140, 0));
+    filter: blur(150px);
+    translate:  -100px -100px;
+    z-index: -1;
+    animation: rotate 20s infinite;
+}
+@keyframes rotate{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+/* .work{
+
+} */
+
+.under::after{
+    position:absolute;
+    content: '';
+    height: 2px;
+    width: 0px;
+    background-color: rgb(255, 115, 0);
+    top: 55px;
+    /* opacity: 0; */
+    transition: all 0.1s ease-in-out;
+
+}
+
+.under:hover::after{
+    width: 80px;
+}
+
+.title{
+    animation: horizontalscroll 3s ease-in-out 0s infinite;
+}
+
+@keyframes horizontalscroll {
+    
+    0% {
+        transform: translateX(0%);
+        /* opacity: 0; */
+    }
+    100% {
+        transform: translateX(-100%);
+        /* opacity: 0; */
+    }
+}
+
+.on{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.navbar.trans {
+    transform: translateY(-100%);
+    transition: 3ms ease-in-out;
+  }
